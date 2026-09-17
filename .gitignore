@@ -1,0 +1,39 @@
+# Root .gitignore for Hyperproof Risk Register
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.mvn/wrapper/maven-wrapper.jar
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm
+.vite/
+
+# IDE & OS
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Environment & Databases
+.env
+.env.local
+*.h2.db
+*.trace.db
+postgres_data/
