@@ -194,7 +194,18 @@ mvn test
 - `RiskBusinessRuleTest` (6 tests): Verification that closing unmitigated Critical, High, and Medium risks is rejected, while Low risks and risks with $\ge 1$ control are permitted.
 - `RiskApiIntegrationTest` (4 tests): Full lifecycle API tests (Create risk $\rightarrow$ add mitigation $\rightarrow$ check residual drop $\rightarrow$ add second mitigation $\rightarrow$ close risk $\rightarrow$ test invalid input 400 rejection $\rightarrow$ test 422 compliance rule rejection $\rightarrow$ test filter and sort).
 
-### Frontend Build Verification
+### Frontend Tests (Vitest + React Testing Library)
+
+```bash
+cd frontend
+npm test
+```
+
+**Test Coverage Summary (13 tests passing):**
+- `scoring.test.ts` (9 tests): Inherent probability & impact bounds, severity band classifications (`LOW`, `MEDIUM`, `HIGH`, `CRITICAL`), residual compound dampening, zero mitigations baseline, and floor clamping ($\ge 1$).
+- `components.test.tsx` (4 tests): Unit rendering tests for `ScoreBadge` and severity color mappings.
+
+### Frontend Production Build
 
 ```bash
 cd frontend
